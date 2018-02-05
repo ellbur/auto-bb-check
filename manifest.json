@@ -1,0 +1,21 @@
+{
+    "name": "Auto BB Check",
+	"description": "Automatically runs a search over BB journals and makes a table",
+	"version": "1.0.0",
+	"author": "Owen Healy <owenehealy@gmail.com>",
+    "manifest_version": 2,
+    "permissions": [
+		"storage",
+        "https://1.next.westlaw.com/*",
+        "http://1.next.westlaw.com/*"
+    ],
+    "content_scripts": [
+		{
+			"matches": ["https://1.next.westlaw.com/*", "http://1.next.westlaw.com/*"],
+			"js": ["third-party/jquery-3.1.1.min.js", "contentscript.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"autobbcheck.css"
+	]
+}
